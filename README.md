@@ -1,5 +1,7 @@
 # Kurapati Saiteja | Portfolio v2
 
+**🌐 Live Demo: [https://portfolio-ks-beta.vercel.app/](https://portfolio-ks-beta.vercel.app/)**
+
 A modern, highly interactive personal portfolio designed to showcase my full-stack engineering and UI/UX design capabilities. Built with a focus on premium typography, smooth micro-animations, and fluid responsiveness.
 
 ### 🚀 Tech Stack
