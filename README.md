@@ -1,4 +1,4 @@
-# Kurapati Saiteja | Portfolio v2
+# Kurapati Saiteja | Portfolio 3D
 
 🌐 **Live Demo**: [https://portfolio-ks-beta.vercel.app/](https://portfolio-ks-beta.vercel.app/)
 
