@@ -1,0 +1,49 @@
+/* ========================================================
+   KST Portfolio — Dennis Snellenberg / Osmo Curved Wipe Page Transition
+   Smart color: white wipe on dark pages, black wipe on light pages
+   ======================================================== */
+
+.page-transition-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1500;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Default: black wipe (for light-background pages like hero) */
+.page-transition-wrapper.wipe-dark .transition-svg {
+  fill: var(--black-deep, #0b0b0b);
+}
+
+/* Light wipe (for dark-background pages like about, work, contact) */
+.page-transition-wrapper.wipe-light .transition-svg {
+  fill: #f4f3ef;
+}
+
+.transition-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.transition-path {
+  animation: page-wipe 0.9s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes page-wipe {
+  0% {
+    d: path("M 0 100 C 50 100 50 100 100 100 L 100 100 C 50 100 50 100 0 100 Z");
+  }
+  40% {
+    d: path("M 0 0 C 50 40 50 40 100 0 L 100 100 C 50 100 50 100 0 100 Z");
+  }
+  60% {
+    d: path("M 0 0 C 50 0 50 0 100 0 L 100 100 C 50 100 50 100 0 100 Z");
+  }
+  100% {
+    d: path("M 0 0 C 50 0 50 0 100 0 L 100 0 C 50 -40 50 -40 0 0 Z");
+  }
+}

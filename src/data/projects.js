@@ -1,0 +1,67 @@
+export const projectsData = [
+  {
+    id: "01",
+    title: "Swarala Thota",
+    badge: "LIVE",
+    year: "2025",
+    location: "Hyderabad, India",
+    services: "Full-Stack Development & Payments",
+    description:
+      "Full event booking platform for Paatashala music brand, Hyderabad. Firebase Auth, Cashfree payments, Cloudflare Workers/D1/R2 backend.",
+    tech: ["HTML", "CSS", "JS", "FIREBASE", "CASHFREE", "CLOUDFLARE"],
+    link: "https://www.swaralathota.com/",
+    preview: "/sequence/frame_040_delay-0.067s.webp",
+  },
+  {
+    id: "02",
+    title: "Cresco Prime",
+    badge: "LIVE",
+    year: "2025",
+    location: "Hyderabad, India",
+    services: "Frontend & Motion Design",
+    description:
+      "Prop trading platform with GSAP animations, Framer Motion, Lenis smooth scroll, Firebase Auth and Recharts dashboards.",
+    tech: ["REACT", "VITE", "GSAP", "FRAMER MOTION", "FIREBASE"],
+    link: "https://www.crescoprime.com/",
+    preview: "/sequence/frame_070_delay-0.067s.webp",
+  },
+  {
+    id: "03",
+    title: "Matrix Missions",
+    badge: "LIVE",
+    year: "2026",
+    location: "Hyderabad, India",
+    services: "Official Startup Platform",
+    description:
+      "Official website for a fintech startup, combining premium 3D visuals, cinematic motion design, and secure authentication. Powered by HTML, CSS, JavaScript, GSAP, Lenis, and Firebase.",
+    tech: ["HTML", "CSS", "JS", "GSAP", "LENIS", "FIREBASE"],
+    link: "https://matrixmissions.in/",
+    preview: "/sequence/frame_100_delay-0.067s.webp",
+  },
+  {
+    id: "04",
+    title: "OroGlee Dental",
+    badge: null,
+    year: "2024",
+    location: "Telangana, India",
+    services: "Full-Stack MERN Application",
+    description:
+      "Full-stack MERN dental appointment booking app with patient dashboard and real-time appointment management.",
+    tech: ["MONGODB", "EXPRESS", "REACT", "NODE.JS", "NETLIFY"],
+    link: "https://github.com/Saiteja-k25/oroglee-dental-app",
+    preview: "/sequence/frame_015_delay-0.067s.webp",
+  },
+  {
+    id: "05",
+    title: "Assignment Summarizer",
+    badge: "WEB APP",
+    year: "2024",
+    location: "Telangana, India",
+    services: "AI Assignment Tool",
+    description:
+      "React app powered by Groq API and LLaVA for intelligent assignment summarization. Deployed on Netlify + Railway.",
+    tech: ["REACT", "GROQ API", "LLAVA", "NETLIFY", "RAILWAY"],
+    link: "https://assignment-summarizer.netlify.app/",
+    preview: "/sequence/frame_120_delay-0.067s.webp",
+  },
+];

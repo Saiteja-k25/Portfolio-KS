@@ -1,0 +1,195 @@
+/* ========================================================
+   KST Portfolio — Hardware-Accelerated 60FPS Preloader
+   Large S-Logo Mark + "Materializing..." + Smooth GPU Curtain Reveal
+   ======================================================== */
+
+.preloader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #060606;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transition: transform 1.0s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.85s cubic-bezier(0.76, 0, 0.24, 1);
+  pointer-events: auto;
+}
+
+.preloader-overlay.exiting {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  pointer-events: none;
+}
+
+.preloader-hero-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ---------- Large Standalone S-Logo Centerpiece ---------- */
+.preloader-s-hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1.0s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.75s ease-out;
+  animation: s-logo-ambient 3.5s ease-in-out infinite;
+}
+
+@keyframes s-logo-ambient {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.18));
+  }
+  50% {
+    transform: translate3d(0, 0, 0) scale(1.05);
+    filter: drop-shadow(0 0 65px rgba(255, 255, 255, 0.38));
+  }
+}
+
+.preloader-s-hero-logo {
+  width: clamp(240px, 28vw, 360px);
+  height: auto;
+  object-fit: contain;
+  filter: invert(1) brightness(2);
+}
+
+.preloader-s-hero-wrapper.zoom-exit {
+  transform: translate3d(0, -40px, 0) scale(0.95) !important;
+  opacity: 0 !important;
+}
+
+/* ---------- Bottom Loading Controls & Counter ---------- */
+.preloader-bottom-controls {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-progress-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.materializing-label {
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+  color: var(--cream-dim);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  animation: label-pulse 2s ease-in-out infinite;
+}
+
+@keyframes label-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.preloader-counter-text {
+  font-family: var(--font-mono);
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.12em;
+}
+
+.preloader-bar-track {
+  width: 240px;
+  height: 2px;
+  background: rgba(244, 243, 239, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.preloader-bar-fill {
+  height: 100%;
+  background: #ffffff;
+  transition: width 0.15s ease-out;
+  box-shadow: 0 0 12px #ffffff;
+}
+
+/* ---------- UNFOLDING Launch Button ---------- */
+.preloader-unfolding-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.05rem 3.2rem;
+  border-radius: 100px;
+  background: rgba(244, 243, 239, 0.12);
+  border: 1px solid rgba(244, 243, 239, 0.45);
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: button-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards, unfolding-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes button-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 15px, 0) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes unfolding-glow {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.preloader-unfolding-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: translate3d(0, -4px, 0) scale(1.06);
+  box-shadow: 0 18px 50px rgba(255, 255, 255, 0.55);
+}
+
+.preloader-unfolding-btn:active {
+  transform: translate3d(0, -1px, 0) scale(0.98);
+}

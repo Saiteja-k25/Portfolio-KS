@@ -1,0 +1,366 @@
+/* ========================================================
+   KST Portfolio — About Page Styling (Images 1, 2, 3)
+   ======================================================== */
+
+.about-page {
+  background-color: var(--black);
+  color: var(--cream);
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.about-content {
+  padding-top: 6rem;
+}
+
+.about-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 4rem;
+}
+
+/* ---------- SECTION 1: HERO & EXPERIENCE (Image 1) ---------- */
+.about-hero-section {
+  border-bottom: 1px solid var(--cream-muted);
+}
+
+.section-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  color: var(--cream-dim);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.about-main-headline {
+  font-size: clamp(3rem, 6.5vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 2.5rem;
+}
+
+.about-main-headline .serif-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about-main-headline .bold-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
+
+.bio-lead {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  line-height: 1.6;
+  color: var(--cream-dim);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.bio-body {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--cream-dim);
+  max-width: 600px;
+}
+
+/* Experience Timeline Right Column */
+.exp-heading {
+  margin-bottom: 2rem;
+  color: var(--cream-dim);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-item {
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--cream-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.exp-item:first-child {
+  padding-top: 0;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp-role {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.now-badge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: #16a34a;
+  border: 1px solid #4ade80;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.exp-period {
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+}
+
+.exp-company {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+}
+
+/* ---------- SECTION 2: FOUR DIFFERENTIATORS (Image 2) ---------- */
+.about-traits-section {
+  border-bottom: 1px solid var(--cream-muted);
+}
+
+.traits-headline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.traits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.trait-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.trait-num {
+  color: var(--cream-dim);
+  font-size: 0.75rem;
+}
+
+.trait-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.trait-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--cream-dim);
+}
+
+/* ---------- SECTION 3: CREATOR WORLD / LENS (Image 3) ---------- */
+.creator-world-section {
+  padding-bottom: 8rem;
+}
+
+.creator-card {
+  position: relative;
+  background: rgba(244, 243, 239, 0.03);
+  border: 1px solid var(--cream-muted);
+  padding: 5rem 4rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  gap: 4rem;
+}
+
+.creator-watermark {
+  position: absolute;
+  right: -2rem;
+  bottom: -2rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 14rem;
+  color: rgba(244, 243, 239, 0.03);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  line-height: 0.8;
+  user-select: none;
+}
+
+.creator-text-col {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.creator-tagline {
+  color: var(--cream-dim);
+}
+
+.creator-headline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.1;
+}
+
+.creator-desc {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--cream-dim);
+}
+
+.creator-btn-col {
+  position: relative;
+  z-index: 2;
+}
+
+.creator-btn {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--black);
+  padding: 1.2rem 2.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out-expo), background 0.3s ease;
+}
+
+.creator-btn:hover {
+  transform: scale(1.05);
+  background: #ffffff;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .traits-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .creator-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+  .about-section {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding-top: 4.5rem;
+  }
+  .about-section {
+    padding: 2.5rem 1.25rem;
+  }
+  .section-meta {
+    margin-bottom: 2rem;
+    font-size: 0.75rem;
+  }
+  .about-main-headline {
+    font-size: clamp(2rem, 7.5vw, 3.2rem);
+    margin-bottom: 1.5rem;
+  }
+  .bio-lead {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+  .bio-body {
+    font-size: 0.95rem;
+  }
+  .exp-item {
+    padding: 1.4rem 0;
+  }
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .exp-role {
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .exp-period {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+  .traits-headline {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    margin-bottom: 2rem;
+  }
+  .trait-card {
+    gap: 0.6rem;
+    padding-top: 0;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(244, 243, 239, 0.08);
+  }
+  .trait-title {
+    font-size: 1.25rem;
+  }
+  .trait-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .creator-world-section {
+    padding-bottom: 4rem;
+  }
+  .creator-card {
+    padding: 2rem 1.25rem;
+  }
+  .creator-watermark {
+    display: none;
+  }
+  .creator-headline {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+  .creator-desc {
+    font-size: 0.95rem;
+  }
+}
